@@ -1,0 +1,34 @@
+#Kenguru{
+    height: 50%;
+     width: 50%;
+     object-fit: cover;
+}
+#imagem_pagamento-em-dinheiro{ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    color: hsl(0, 0%, 100%);
+}
+.tomaz{
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+   }
+  
+.joao{
+    text-align: center;
+   }
+
+    #btn-simular{
+        
+    }
+
+    #div-btn-simular
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    #imagem-kenguru
+    {
+        display: flex;
+        justify-content: center;        
+    }

@@ -1,0 +1,7 @@
+{
+  "name": "serafimcar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
