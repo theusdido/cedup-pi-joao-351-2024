@@ -4,7 +4,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"class="ion-padding">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Produto</ion-title>
@@ -18,13 +19,14 @@
    <i class="fa-solid fa-circle-half-stroke"></i>
    <h5 class="joao">KENGURU 2024</h5>
    <div id="imagem-kenguru">
-    <img id="Kenguru" src="../../assets/Kenguru.jpg"alt="" width="40px">
+    <img id="Kenguru" src="../../assets/Kenguru.jpg" alt="">
    </div>
    
    <h4 class="joao">R$ 60.000</h4>
    <h6 class="tomaz">O Kenguru tem apenas uma porta localizada em todo o painel traseiro e destina-se a um único passageiro.Ao pressionar um botão, a porta abre-se e surge uma rampa para fácil acesso.Em vez de volante e pedais, este modelo utiliza botões de aceleração e travagem e comandos direcionais. </h6>
    <div id="div-btn-simular">
-    <button id="btn-simular">Simular financimento</button>
+    <button id="botao-simular" routerLink="/pesquisa">Simular Finaciamento</button>
+  
    </div>
    
    <img src="../../assets/pagamento-em-dinheiro.png"alt="" width="55px">
