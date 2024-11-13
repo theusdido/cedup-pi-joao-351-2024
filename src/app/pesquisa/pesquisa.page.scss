@@ -102,3 +102,20 @@
   #pesquisa-busca{
     color: #fff;
   }
+  .icones-acessibilidade{
+    display:flex;
+    flex-direction:row;
+
+  }
+  .icones-acessibilidade div
+  {
+          flex:1;
+          font-size:3.5rem;
+          flex:1;
+          font-size:1rem;
+          text-align:center;
+  }
+
+
+
+  
