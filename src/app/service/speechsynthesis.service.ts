@@ -8,6 +8,9 @@ export class SpeechsynthesisService {
   constructor() { }
 
   falar(texto:string){
+
+    if (!this.getListen()) return;
+
     // Verifica se a API de síntese de fala está disponível no navegador
     if ('speechSynthesis' in window){
       this.converterTextoEmAudio(texto);
@@ -27,5 +30,24 @@ export class SpeechsynthesisService {
 
     // Inicia a síntese de fala
     window.speechSynthesis.speak(utterance);
+  }  
+
+
+  setListen(){
+    const enabled_listen = this.getListen();
+    if (enabled_listen) {
+      localStorage.setItem('enabled-listen', 'false');
+    }else{
+      localStorage.setItem('enabled-listen', 'true');
+    }
+  }
+
+  getListen(){
+    const enabled_listen = localStorage.getItem('enabled-listen');
+    if (enabled_listen == 'true' || enabled_listen == null || enabled_listen == undefined || enabled_listen == '') {
+      return true;
+    }else{
+      return false;
+    }
   }  
 }

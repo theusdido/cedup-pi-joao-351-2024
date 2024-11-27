@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../service/theme.service';
+import { SpeechsynthesisService } from '../service/speechsynthesis.service';
 
 @Component({
   selector: 'app-acessibilidade',
@@ -11,12 +12,13 @@ export class AcessibilidadePage implements OnInit {
   public icon_tamanho_fonte: string = '../../assets/icon/tamanho-fonte.png';
 
   constructor(
-    public theme_service: ThemeService
+    public theme_service: ThemeService,
+    public speech_service: SpeechsynthesisService
   ) {
   }
 
   ngOnInit() {
-
+    this.setListenColor();
   }
 
   setContraste() {
@@ -56,5 +58,24 @@ export class AcessibilidadePage implements OnInit {
     }else{
       return parseInt(tamanho_fonte_ls);
     } 
+  }
+
+  setListen(){
+    this.speech_service.setListen();
+    this.setListenColor();
+  }
+
+  setListenColor(){
+    const is_listen       = this.speech_service.getListen();
+    const icon_listen:any = document.querySelector('#icon-listen');
+    if (is_listen){
+      icon_listen.classList.remove('fa-ear-listen');
+      icon_listen.classList.add('fa-ear-deaf');
+      icon_listen.style.color = '';
+    }else{
+      icon_listen.classList.remove('fa-ear-deaf');
+      icon_listen.classList.add('fa-ear-listen');
+      icon_listen.style.color = 'red';
+    }    
   }
 }

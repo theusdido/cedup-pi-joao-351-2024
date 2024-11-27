@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pesquisa',
     pathMatch: 'full'
   },
   {
@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'produto',
     loadChildren: () => import('./produto/produto.module').then( m => m.ProdutoPageModule)
-  },  {
+  },
+  {
     path: 'acessibilidade',
     loadChildren: () => import('./acessibilidade/acessibilidade.module').then( m => m.AcessibilidadePageModule)
   },
