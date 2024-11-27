@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PesquisaPageRoutingModule } from './pesquisa-routing.module';
 
 import { PesquisaPage } from './pesquisa.page';
+import { AcessibilidadePageModule } from '../acessibilidade/acessibilidade.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PesquisaPageRoutingModule
+    PesquisaPageRoutingModule,
+    AcessibilidadePageModule
   ],
   declarations: [PesquisaPage]
 })

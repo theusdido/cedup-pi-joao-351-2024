@@ -1,41 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>faq</ion-title>
-    <i class="material-icons">menu</i>
-
+    <ion-title>Perguntas Frequentes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">faq</ion-title>
+      <ion-title size="large">Perguntas Frequentes</ion-title>
     </ion-toolbar>
   </ion-header>
+  <app-acessibilidade></app-acessibilidade>
 
-  
-  <i class="fas fa-hands"></i>
-   <i class="fa-brands fa-accessible-icon"></i>
-  
-   
-   <img src="../../assets/OIP (1).jpg" alt="" width="20px">
-     
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" >
+        <ion-label (click)="falar('Como comprar? Usando nosso aplicativo, você pode comprar negociando direto com o vendedor.')">
+          <span class="texto">Como comprar?</span>
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding texto" slot="content">Usando nosso aplicativo, você pode comprar negociando direto com o vendedor.</div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" >
+        <ion-label (click)="falar('Posso pagar pelo aplicativo? Não, nosso aplicativo apenas fornece a tecnologia para conectar compradores e vendedores de veículos adaptados.')">
+          <span class="texto">Posso pagar pelo aplicativo?</span>
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding texto" slot="content">Não, nosso aplicativo apenas fornece a tecnologia para conectar compradores e vendedores de veículos adaptados.</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" >
+        <ion-label (click)="falar('Sou vendedor, como posso anunciar um veículo? Você pode entrar em contato com nosso suporte, clicando no botão abaixo. Ficaremos felizes em anunciar seu veículo.')">
+          <span class="texto">Sou vendedor, como posso anunciar um veículo?</span>
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding texto" slot="content">Você pode entrar em contato com nosso suporte, clicando no botão abaixo. Ficaremos felizes em anunciar seu veículo.</div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <ion-item>
+    <p class="texto texto-aindacomduvidas" (click)="falar('Se ainda tiver dúvida, vocé pode entrar em contado conosco, clicando no botão abaixo, que lhe responderemos o mais breve possivel.')">
+      Se ainda tiver dúvida, vocé pode entrar em contado conosco, clicando no botão abaixo, que lhe responderemos o mais breve possivel.
+    </p>
+  </ion-item>
 
-   <i class="fas-duotone fa-solid fa-text-size"></i>
-   <i class="fa-solid fa-microphone-lines"></i>
-   <i class="fa-solid fa-circle-half-stroke"></i>
-
-   <h6>PERGUNTAS FREQUENTES</h6> 
-   <h6>Ficou com alguma duvida?</h6>
-   <h6>Onde comprar?</h6>
-   <h6>Qual prazo de entrega?</h6>
-   <h6>Posso devolver o veiculo?</h6>
-   <h6>Quais os planos de parcelamento?</h6>
-   <p>Se ainda não tivermos respondido sua pergunda vocé pode entrar em contado conosco que lhe responderemos o mais breve possivel. </p>
-   <div class="rectangle">
-
-   </div>
-   <i class="fa-solid fa-envelope"></i>
-   <img id="imagem_cadeirante" src="../../assets/pngtree-vector-question-mark-icon-png-image_1024598.jpg" alt="center" width="12px">   
+  <ion-button routerLink="/pesquisa" expand="block" class="texto">Entrar em Contato</ion-button>
 </ion-content>
 

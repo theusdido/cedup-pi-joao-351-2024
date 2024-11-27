@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { FaqPageRoutingModule } from './faq-routing.module';
 
 import { FaqPage } from './faq.page';
+import { AcessibilidadePageModule } from '../acessibilidade/acessibilidade.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FaqPageRoutingModule
+    FaqPageRoutingModule,
+    AcessibilidadePageModule
   ],
   declarations: [FaqPage]
 })

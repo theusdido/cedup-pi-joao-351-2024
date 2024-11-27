@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { VendedorPageRoutingModule } from './vendedor-routing.module';
 
-import { LoginPage } from './login.page';
+import { VendedorPage } from './vendedor.page';
 import { AcessibilidadePageModule } from "../acessibilidade/acessibilidade.module";
 
 @NgModule({
@@ -14,9 +14,9 @@ import { AcessibilidadePageModule } from "../acessibilidade/acessibilidade.modul
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule,
+    VendedorPageRoutingModule,
     AcessibilidadePageModule
 ],
-  declarations: [LoginPage]
+  declarations: [VendedorPage]
 })
-export class LoginPageModule {}
+export class VendedorPageModule {}

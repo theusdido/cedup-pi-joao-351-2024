@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ContatoPageRoutingModule } from './contato-routing.module';
 
 import { ContatoPage } from './contato.page';
+import { AcessibilidadePageModule } from '../acessibilidade/acessibilidade.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ContatoPageRoutingModule
+    ContatoPageRoutingModule,
+    AcessibilidadePageModule
   ],
   declarations: [ContatoPage]
 })

@@ -39,6 +39,29 @@
 .md,    
 .ios
 {
-    --ion-background-color: #050A30;
-    --ion-text-color: #FFFFFF;
+    --ion-toolbar-background: none !important;
+}
+
+ion-list,
+ion-item,
+ion-accordion-group,
+ion-accordion
+{
+    background: none !important;
+    --background: none !important;
+}
+
+.texto
+{
+    transition: font-size 0.5s ease;
+}
+
+.texto-1x
+{
+    font-size: 1.5rem;
+}
+
+.texto-2x
+{
+    font-size: 2rem;
 }

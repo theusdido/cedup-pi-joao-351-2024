@@ -1,0 +1,32 @@
+.acessibilidade-icons
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size:2rem;
+    }
+    .item
+    {
+        width:25%;
+        text-align: center;
+        padding: 10px;
+
+        img
+        {
+            height: 30px;
+        }
+    }
+
+    .icone-tamanho-fonte
+    {
+        font-weight: bold;
+    }
+    .icone-tamanho-fonte .maior{
+        font-size: 40px;
+    }
+    .icone-tamanho-fonte .menor{
+        font-size: 20px;
+    }
+}
+

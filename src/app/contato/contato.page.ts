@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpeechsynthesisService } from '../service/speechsynthesis.service';
 
 @Component({
   selector: 'app-contato',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContatoPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public speech_service: SpeechsynthesisService
+  ) { }
 
   ngOnInit() {
+    this.speech_service.falar('Esta é a página de pesquisa de contato.');
+  }
+
+  falar(texto:string){
+    this.speech_service.falar(texto);
   }
 
 }
